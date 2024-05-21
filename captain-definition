@@ -1,14 +1,4 @@
-name: Laravel
-description: A PHP framework for web artisans.
-version: 8.0
-
-environments:
-  - name: development
-    description: Development environment
-    commands:
-      - php artisan serve
-
-  - name: production
-    description: Production environment
-    commands:
-      - php artisan optimize --force
+{
+  "schemaVersion": 2,
+  "dockerfilePath": "./Dockerfile"
+}
