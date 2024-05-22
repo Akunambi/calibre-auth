@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -49,7 +49,7 @@ form {
     flex-direction: column;
 }
 
-input[type="text"], input[type="password"] {
+input[type="text"], input[type="password"], input[type="email"] {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -57,7 +57,7 @@ input[type="text"], input[type="password"] {
     margin-top: 5px;
 }
 
-input[type="button"] {
+input[type="submit"] {
     padding: 10px;
     background-color: #007bff;
     color: white;
@@ -89,23 +89,24 @@ input[type="checkbox"] {
         <div class="formHead">
             <h3>Login to dimiro library</h3>
         </div>
-        <form action="">
+        <form method="POST" action="{{ route('login') }}">
+        @csrf 
             <div class="nameGrp">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username">
+                <label for="username">Email</label>
+                <input type="email" id="username" name="email" required>
             </div>
             <div class="passGrp">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password">
+                <input type="password" id="password" name="password" required>
             </div>
             <div class="btnGrp">
                 <div>
                     <input type="checkbox" id="rememberMe" name="rememberMe">
                     <label for="rememberMe">Remember Me</label>
                 </div>
-                <input type="button" value="Login">
+                <input type="submit" value="Login">
             </div>
         </form>
     </div>
 </body>
-</html> -->
+</html>
