@@ -48,10 +48,11 @@ COPY ./.deploy/config/php/local.ini /usr/local/etc/php/conf.d/local.ini
 
 #GENERATE APP KEY
 COPY ./.env.example ./.env
-# RUN php artisan key:generate --force
+COPY --chown=$NON_ROOT_USER:$NON_ROOT_GROUP . $LARAVEL_PATH/
+RUN php artisan key:generate
 
 # Set any ENVs
-ARG APP_KEY=base64:+DcRmetBonZeu/rSRRsmuKgBoPqaBaloVt2xWIVy2w8=
+ARG APP_KEY=${APP_KEY}
 ARG APP_NAME=${APP_NAME}
 ARG APP_URL=${APP_URL}
 ARG APP_ENV=${APP_ENV}
