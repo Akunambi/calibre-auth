@@ -48,7 +48,7 @@ COPY ./.deploy/config/php/local.ini /usr/local/etc/php/conf.d/local.ini
 
 #GENERATE APP KEY
 COPY --chown=$NON_ROOT_USER:$NON_ROOT_GROUP ./.env.example ./.env
-RUN php artisan key:generate
+# RUN php artisan key:generate
 
 # Set any ENVs
 ARG APP_KEY=${APP_KEY}
