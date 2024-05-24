@@ -29,12 +29,6 @@
             right: 10px;
             z-index: 9999;
         }
-        /* iframe {
-            width: 100%;
-            height: calc(100% - 40px); /* Adjust for logout link height */
-            /* border: none;
-            display: block; */
-        } */
     </style>
 </head>
 <body>
@@ -43,7 +37,7 @@
         <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
     @csrf
 </form></div>
-        <iframe src="http://localhost:8080"></iframe>
+        <iframe src="http://185.218.125.157:8080"></iframe>
     </div>
 </body>
 </html>
